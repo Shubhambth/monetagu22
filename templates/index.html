@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earning Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Text Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Glowing Button */
+        .glow-btn {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+
+        /* Floating Shapes */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white">
+
+    <!-- Hero Section -->
+    <section class="relative flex flex-col items-center justify-center h-screen text-center px-6">
+        <!-- Floating Shape 1 -->
+        <div class="absolute top-10 left-10 w-16 h-16 bg-white bg-opacity-20 rounded-full floating"></div>
+        <!-- Floating Shape 2 -->
+        <div class="absolute bottom-10 right-10 w-24 h-24 bg-white bg-opacity-20 rounded-full floating"></div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold fade-in">
+            Earn Money Online!
+        </h1>
+        <p class="text-lg md:text-xl text-white text-opacity-90 max-w-2xl mt-4 fade-in">
+            Join thousands of users making money online. Work anytime, anywhere, and get paid instantly!
+        </p>
+        <a href="#" class="mt-6 px-8 py-3 text-lg font-semibold bg-yellow-400 text-gray-900 rounded-lg glow-btn transition transform hover:scale-105">
+            Get Started Now
+        </a>
+    </section>
+
+</body>
+</html>
